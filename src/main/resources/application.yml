@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: user-rest-api
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+server:
+  port: 8081
+  servlet:
+    context-path: /${spring.application.name}
+jwt:
+  wrongemailorpassmsg: Invalid email or password!
+  secret: thkwmtdmHR3Tca1mWU5MWOuIqUxYwFVo
