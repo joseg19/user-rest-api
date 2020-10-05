@@ -1,19 +1,19 @@
 
-En el directorio diagrams/ se encuentran los diagramas relacionados.
+En el directorio diagrams/ se encuentran los diagramas relacionados.  
 En el directorio postman/ se encuentra el proyecto postman para probar los endpoints de la API.
 
 Instrucciones para la ejecución del proyecto:
 
-1-. clonar el repositorio.
-git clone 
+1-. clonar el repositorio.  
+git clone https://github.com/joseg19/user-rest-api.git
 
-2-. Movernos dentro de la raiz del proyecto.
+2-. Movernos dentro de la raiz del proyecto.  
 cd user-rest-api
 
-3-. Desde la raiz (paso 2), construir el proyecto.
+3-. Desde la raiz (paso 2), construir el proyecto.  
 gradle build
 
-4-. Ejecutar.
+4-. Ejecutar.  
 java -jar build/libs/user-rest-api-0.0.1-SNAPSHOT.jar
 
 
@@ -26,7 +26,7 @@ El proyecto se expone por el puerto 8081 y tiene dos endpoints principales:
 			"email" : "admin@admin.com",
 			"password" : "Admin123"
 		}
-	Nota: Este usuario se carga al iniciar el proyecto. Con fines de poder obtener el token inicial.
+	    Nota: Este usuario se carga al iniciar el proyecto. Con fines de poder obtener el token inicial.
 	
 	http://localhost:8081/user-rest-api/v1/user
 		Tipo POST.
@@ -54,5 +54,14 @@ El proyecto se expone por el puerto 8081 y tiene dos endpoints principales:
 				    
 				    
 				    
-				    	
-		
+Una vez se encuentra corriendo la API, para acceder a la BD en memoria, puede hacerlo mediante la url:  
+    http://localhost:8081/user-rest-api/h2-console/  
+       Con la siguiente data de conexión:  
+       
+       Driver Class:    org.h2.Driver  
+       JDBC URL:        jdbc:h2:mem:testdb  
+       User Name:       admin  
+       Password:        admin
+
+       
+Cualquier sugerencia u observación será bienvenida: 2guzmanjose@gmail.com

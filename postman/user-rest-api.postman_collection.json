@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "373cab37-97a4-4d64-b1aa-c8f74611f965",
+		"name": "USER API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAxOTM2NzcwLCJleHAiOjE2MDE5MzczNzB9.a0mBMfC2etfLOzmSSdHFiMRjXwk4JoKIjCx_vp5y4IYWHXF3ABtCiYZzT85mD6PR29DXyYN1E1oLROEIOJnmiA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Juan Perez\", \r\n\t\"email\": \"juan@gonzalez.org\", \r\n\t\"password\": \"Algo123\", \r\n\t\"phones\": [ \r\n\t\t\t\t { \r\n\t\t\t\t\t\"number\": \"1234567\", \r\n\t\t\t\t\t\"citycode\": \"1\",\r\n\t\t\t\t\t\"countrycode\": \"57\" \r\n                 }\r\n\t\t\t] \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user-rest-api/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user-rest-api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Acces Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"admin@admin.com\",\r\n    \"password\" : \"Admin123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user-rest-api/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user-rest-api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
